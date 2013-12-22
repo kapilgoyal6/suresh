@@ -1,0 +1,87 @@
+!!!
+%html
+  %head
+    %title Suresh Kamblikar
+    -#= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag "bootstrap"
+    = stylesheet_link_tag "bootstrap-glyphicons"
+    = stylesheet_link_tag "home"
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = javascript_include_tag :modernizr
+    -#%link{:href => "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css", :rel => "stylesheet"}/
+    -#%script{:src => "http://code.jquery.com/jquery-1.10.1.min.js"}
+    -#%script{:src => "http://code.jquery.com/jquery-migrate-1.2.1.min.js"}
+    -#%script{:src => "//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"}
+    = csrf_meta_tags
+  %body
+    .navbar{:style => ';top:0;background:#428bca;width:100%;margin-bottom:0;border-bottom:;border-radius:0;height:90px'}
+      %a.navbar-brand{:href => "/"}
+        %h4{:style => 'padding:0;margin-bottom:1%;margin-top:-3%;font-size:30px'}
+          %span{:style => "color:#d9534f;font-weight:;text-shadow:0 1px 2px #191A1B, 0 1px 0 #191A1B;height:90px"}
+          %p{:style => "img-height:200px;size:200px"}
+          = image_tag'suresh.jpg'
+      %ul.nav.navbar-nav{:style => ""}
+        %li{:style => 'text-align:center;font-weight:bold;font-size:20px;padding-top:13px'}
+          %a{:href => "/", :style => 'color:#fff'}
+            %span.glyphicon.glyphicon-home
+            Home
+        %li{:style => 'text-align:center;font-weight:bold;font-size:20px;padding-top:16px'}
+          %a{:href => "/seekers", :style => 'color:#fff'}
+            %span.entypo-search{:style => 'font-weight:normal'}
+            Bio
+
+        %li{:style => 'text-align:center;font-weight:bold;font-size:20px;padding-top:16px'}
+          %a{:href => "/employers", :style => 'color:#fff'}
+            %span.entypo-users
+            Photos
+        %li{:style => 'text-align:center;font-weight:bold;font-size:20px;padding-top:16px'}
+          %a{:href => "/about", :style => 'color:#fff'}
+            %span.entypo-book{:style => 'font-weight:normal'}
+            About Us
+        %li{:style => 'text-align:center;font-weight:bold;font-size:20px;padding-top:16px'}
+          %a{:href => "/contact", :style => 'color:#fff'}
+            %span.entypo-phone
+            Contact Us
+
+
+        
+
+    .container
+      = yield
+
+
+
+
+
+    .navbar{:style => 'position:relative;bottom:0;background:none;width:100%;height:0px;margin-bottom:0;border-top:1px solid #ddd;border-radius:0;'}
+      -#%a.navbar-brand{:href => "#"}
+        %h4{:style => 'padding:0;margin-bottom:1%;margin-top:-3%;font-size:30px'}
+          %span{:style => "color:#d9534f;font-weight:;text-shadow:0 1px 2px #191A1B, 0 1px 0 #191A1B"}
+            = image_tag 'newtimes_logo.png'
+      %ul.nav.navbar-nav{:style => "width:100%;"}
+        %li{:style => 'text-align:center;font-weight:bold;font-size:20px'}
+          %a{:href => "#", :style => 'color:#3276b1'}
+            Connect With Us
+            %br
+            Call Us
+            %span.entypo-phone
+            1-800-CUP-CAKE
+
+        %li{:style => 'text-align:center;font-weight:bold;font-size:20px'}
+          %a{:href => "#", :style => 'color:#3276b1'}
+            %span.entypo-mail
+            Email Us
+            %br
+            info@newtimes.ca
+        %li{:style => 'text-align:center;font-weight:;font-size:20px'}
+          %a{:href => "#", :style => 'color:#3276b1'}
+            © 2013 Newtimes Inc. All Rights Reserved.
+
+        %li{:style => 'text-align:center;font-weight:bold;font-size:20px'}
+          %a{:href => "#", :style => 'color:#3276b1'}
+            %span.entypo-facebook-squared{:style => 'font-size:40px;padding-top:10px;color:#428bca'}
+            %span.entypo-twitter{:style => 'font-size:40px;color:red;padding-top:10px'}
+        -#%li{:style => 'width:20%;text-align:center;font-weight:bold;font-size:20px'}
+          %a{:href => "#", :style => 'color:#fff'}
+            %span.entypo-paper-plane
+            Contact Us

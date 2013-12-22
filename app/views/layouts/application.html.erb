@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suresh Kamblikar - A Cyclist</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag :modernizr %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" style="background-image: url('headerbg.gif'); background-repeat:repeat-x top left #fff;">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="clearfix"></div>
+      <a class="brand" href="/home"><%= image_tag("/assets/logo.png") %></a>
+      <div class="nav-collapse collapse">
+        <div class="nav">
+          <div class="imstyle" style="left: 50%;"><%= image_tag('/assets/imstylist.png', :alt=>"I'm Stylist") %></div>
+        </div>
+        <div class="navbar-form rightTopmenu2">
+          <ul class="topnav">
+            <li><a href="/about_us">About us</a></li>
+            <li><a href="/help">Help</a></li>
+          </ul>  
+        </div>    
+      </div>
+    </div>     
+  </div>        
+</div>
+
+
+<div class="row">
+  <div class="four.columns">
+    Hello1
+  </div>
+  <div class="four.columns">
+    Hello2
+  </div>
+  <div class="col">
+    Hello3
+  </div>
+</div>
+
+
+<div id="footer">
+      <ul id="links">
+        <li>
+          <a href="/">Homepage</a>
+        </li>
+        <li>
+          <a href="/what-is-haml/">What is HAML?</a>
+        </li>
+        <li>
+          <a href="/how-to-use-haml/">HAML usage examples</a>
+        </li>
+      </ul>
+      © HAML Online Converter 2012. All rights reserved.
+</div>
+
+<div class="row" style = "margin-top:2%; border:2px solid black">
+  <div class="row" style = "min-height:50px;width:100px;border:2px solid black;border-radius:0;padding-right:10%;background:red; margin-top:20px;margin-left:20px;margin-bottom:20px">
+    Hi 1
+  </div>
+  <div class="row" style = "min-height:50px;width:100px;border:2px solid black;border-radius:0;padding-right:10%;background:blue; margin-top:20px;margin-left:20px;margin-bottom:20px">
+    Hi 2
+  </div>
+  <div class="row" style = "min-height:50px;width:100px;border:2px solid black;border-radius:0;padding-right:10%;background:orange; margin-top:20px;margin-left:20px;margin-bottom:20px">
+    Hi 3
+  </div>
+</div>
+
+
+
+<%= yield %>
+
+<footer style="background-color:#e9e9e9; text-align: center; padding-top:10px; padding-bottom:10px">
+  Copyright © 2013. <a href="#">www.sureshkamblikar.in</a>
+  <a href="https://www.facebook.com/suresh.kamblikar"><img style="width:30px; height:30px; padding-left:100px" src="assets/fb.jpg"></img></a>
+  <a href="https://www.twitter.com/suresh.kamblikar"><img style="width:30px; height:30px; padding-left:20px;" src="assets/twitter.jpeg"></img></a>
+</footer>
+
+</body>
+</html>
